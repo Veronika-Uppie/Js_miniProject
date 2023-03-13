@@ -1,11 +1,10 @@
+// На странице user-details.html:
+// 4 Вивести всю, без виключення, інформацію про об'єкт user на який клікнули
 
 let url = new URL(location.href);
 let user = JSON.parse(url.searchParams.get('data'));
 
 let divDetailsBlock = document.getElementById('user-details');
-
-
-
 
 
 function getUserDetails (obj) {
@@ -23,24 +22,26 @@ function getUserDetails (obj) {
             divUserDetails.innerText = `${item}: ${obj[item]}`;
 
             divDetailsBlock.appendChild(divUserDetails);
-
         }
     }
-
 }
 getUserDetails(user);
 
 
 
 
-let currentUserId = user.id;
 
+// 5 Додати кнопку "post of current user", при кліку на яку, з'являються title всіх постів поточного юзера
+// (для получения постов используйте эндпоинт https://jsonplaceholder.typicode.com/users/USER_ID/posts)
+// 6 Каждому посту додати кнопку/посилання, при кліку на яку відбувається перехід на сторінку post-details.html, котра має детальну інфу про поточний пост.
+
+
+let currentUserId = user.id;
 
 document.getElementsByTagName("button")[0].onclick = function(eo) {
     eo.preventDefault();
     let usersPostsBlock = document.createElement('div');
     usersPostsBlock.id = 'userPosts';
-
 
     let urlUsers = new URL('https://jsonplaceholder.typicode.com/posts');
 
@@ -55,15 +56,17 @@ document.getElementsByTagName("button")[0].onclick = function(eo) {
 
                     let divPostBlock = document.createElement('div');
                     divPostBlock.classList.add('user-block');
-                    divPostBlock.innerText = `${post.title}`;
+                    let a = document.createElement('a');
+                    a.innerText = `${post.title}`;
+                    a.href = 'post-details.html?data=' + JSON.stringify(post);
 
+                    divPostBlock.appendChild(a);
                     usersPostsBlock.appendChild(divPostBlock);
                 }
             }
         });
 
-
-
     document.body.appendChild(usersPostsBlock);
-
 };
+
+

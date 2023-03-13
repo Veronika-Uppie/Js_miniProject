@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e94dfa4f-8d02-4578-8842-931d8bb34674" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/user-details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-details.js" beforeDir="false" afterPath="$PROJECT_DIR$/user-details.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +53,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1678715249768</updated>
-      <workItem from="1678715250190" duration="10906000" />
+      <workItem from="1678715250190" duration="11260000" />
     </task>
     <task id="LOCAL-00001" summary=" В index.html&#10;1 отримала масив об'єктів з endpoint`а https://jsonplaceholder.typicode.com/users&#10;2 Вивела id,name всіх user в index.html. Окремий блок для кожного user.&#10;3 Додала кожному блоку посилання , при кліку на яку відбувається перехід  на сторінку user-details.html, котра має детальну інфорацію про об'єкт на який клікнули&#10;&#10; На строрінці user-details.html:&#10;4 Вивела НЕ! всю інформацію про об'єкт user на який клікнули">
       <created>1678719696176</created>
@@ -72,7 +69,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678723155922</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="5 Додала кнопку &quot;post of current user&quot;, при кліку на яку, з'являються title всіх постів поточного юзера">
+      <created>1678726309139</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678726309139</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -81,6 +85,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value=" В index.html&#10;1 отримала масив об'єктів з endpoint`а https://jsonplaceholder.typicode.com/users&#10;2 Вивела id,name всіх user в index.html. Окремий блок для кожного user.&#10;3 Додала кожному блоку посилання , при кліку на яку відбувається перехід  на сторінку user-details.html, котра має детальну інфорацію про об'єкт на який клікнули&#10;&#10; На строрінці user-details.html:&#10;4 Вивела НЕ! всю інформацію про об'єкт user на який клікнули" />
     <MESSAGE value="&#10; На строрінці user-details.html:&#10;4 Вивела всю інформацію про об'єкт user на який клікнули" />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10; На строрінці user-details.html:&#10;4 Вивела всю інформацію про об'єкт user на який клікнули" />
+    <MESSAGE value="5 Додала кнопку &quot;post of current user&quot;, при кліку на яку, з'являються title всіх постів поточного юзера" />
+    <option name="LAST_COMMIT_MESSAGE" value="5 Додала кнопку &quot;post of current user&quot;, при кліку на яку, з'являються title всіх постів поточного юзера" />
   </component>
 </project>
