@@ -1,8 +1,8 @@
 // На странице user-details.html:
 // 4 Вивести всю, без виключення, інформацію про об'єкт user на який клікнули
 
-let url = new URL(location.href);
-let user = JSON.parse(url.searchParams.get('data'));
+let urlUser = new URL(location.href);
+let user = JSON.parse(urlUser.searchParams.get('data'));
 
 let divDetailsBlock = document.getElementById('user-details');
 
