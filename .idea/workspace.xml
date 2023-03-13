@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e94dfa4f-8d02-4578-8842-931d8bb34674" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/post-details.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/post-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/post-details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-details.js" beforeDir="false" afterPath="$PROJECT_DIR$/post-details.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-details.js" beforeDir="false" afterPath="$PROJECT_DIR$/user-details.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +56,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1678715249768</updated>
-      <workItem from="1678715250190" duration="12421000" />
+      <workItem from="1678715250190" duration="14913000" />
     </task>
     <task id="LOCAL-00001" summary=" В index.html&#10;1 отримала масив об'єктів з endpoint`а https://jsonplaceholder.typicode.com/users&#10;2 Вивела id,name всіх user в index.html. Окремий блок для кожного user.&#10;3 Додала кожному блоку посилання , при кліку на яку відбувається перехід  на сторінку user-details.html, котра має детальну інфорацію про об'єкт на який клікнули&#10;&#10; На строрінці user-details.html:&#10;4 Вивела НЕ! всю інформацію про об'єкт user на який клікнули">
       <created>1678719696176</created>
@@ -86,7 +86,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678726698532</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary=" 7 Вивела всю, без виключення, інформацію про об'єкт post на який клікнули .">
+      <created>1678728001410</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678728001410</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,6 +104,7 @@
     <MESSAGE value="&#10; На строрінці user-details.html:&#10;4 Вивела всю інформацію про об'єкт user на який клікнули" />
     <MESSAGE value="5 Додала кнопку &quot;post of current user&quot;, при кліку на яку, з'являються title всіх постів поточного юзера" />
     <MESSAGE value="6 Каждому посту додала кнопку/посилання" />
-    <option name="LAST_COMMIT_MESSAGE" value="6 Каждому посту додала кнопку/посилання" />
+    <MESSAGE value=" 7 Вивела всю, без виключення, інформацію про об'єкт post на який клікнули ." />
+    <option name="LAST_COMMIT_MESSAGE" value=" 7 Вивела всю, без виключення, інформацію про об'єкт post на який клікнули ." />
   </component>
 </project>

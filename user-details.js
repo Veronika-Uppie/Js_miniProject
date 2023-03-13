@@ -36,37 +36,33 @@ getUserDetails(user);
 // 6 Каждому посту додати кнопку/посилання, при кліку на яку відбувається перехід на сторінку post-details.html, котра має детальну інфу про поточний пост.
 
 
-let currentUserId = user.id;
 
 document.getElementsByTagName("button")[0].onclick = function(eo) {
     eo.preventDefault();
     let usersPostsBlock = document.createElement('div');
     usersPostsBlock.id = 'userPosts';
 
-    let urlUsers = new URL('https://jsonplaceholder.typicode.com/posts');
+    let urlPosts = new URL('https://jsonplaceholder.typicode.com/posts?userId=' + JSON.stringify(user.id));
 
-    fetch(urlUsers)
+    fetch(urlPosts)
         .then(value => value.json())
         .then(posts => {
             for (const post of posts) {
 
-                console.log(post.userId)
-
-                if (post.userId === currentUserId) {
-
                     let divPostBlock = document.createElement('div');
                     divPostBlock.classList.add('user-block');
                     let a = document.createElement('a');
-                    a.innerText = `${post.title}`;
+                    a.innerText = post.title;
                     a.href = 'post-details.html?data=' + JSON.stringify(post);
 
                     divPostBlock.appendChild(a);
                     usersPostsBlock.appendChild(divPostBlock);
-                }
+
             }
         });
 
     document.body.appendChild(usersPostsBlock);
 };
+
 
 
