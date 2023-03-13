@@ -1,0 +1,61 @@
+/*// Стилизація проєкта -*/
+/*// index.html - всі блоки з user - по 2 в рядок. кнопки/аосилвння розташувати під інформацією про user.*/
+/*//     user-details.html - блок з інфою про user зверху сторінки. Кнопка нижчє, на 90% ширини сторінки, по центру.*/
+/*//     блоки з короткою іфною про post - в ряд по 5 .*/
+/*//     post-details.html - блок з інфою про пост зверху. Коментарі - по 4 в ряд.*/
+/*//     Всі елементи котрі характеризують users, posts, comments візуалізувати, так, щоб було видно що це блоки (дати фон. марджини і тд)*/
+
+
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.users {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("img/bg.png");
+    background-size: 100%;
+    margin: 10px;
+}
+
+#usersData{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 75%;
+    margin-bottom: 10px;
+}
+
+.headerUser{
+    font-size: 36px;
+    color: #e6d193;
+    background: rgba(133, 117, 85, 0.42);
+    margin: 5px;
+    width: 75%;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e6d194;
+    border-radius: 10px;
+}
+
+.user-block{
+    display: flex;
+    width: 48%;
+    height: 60px;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 24px;
+    margin: 5px;
+    border-radius: 10px;
+    background: rgba(222, 222, 222, 0.29);
+    border: 1px solid rgba(248, 248, 253, 0.53);
+
+}
+a{
+    color: rgb(244, 248, 250);
+}
