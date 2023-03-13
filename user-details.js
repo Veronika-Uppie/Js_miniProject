@@ -5,9 +5,6 @@ let user = JSON.parse(url.searchParams.get('data'));
 let divDetailsBlock = document.getElementById('user-details');
 
 
-console.log(user);
-
-
 
 
 
@@ -25,8 +22,6 @@ function getUserDetails (obj) {
 
             divUserDetails.innerText = `${item}: ${obj[item]}`;
 
-
-
             divDetailsBlock.appendChild(divUserDetails);
 
         }
@@ -34,3 +29,41 @@ function getUserDetails (obj) {
 
 }
 getUserDetails(user);
+
+
+
+
+let currentUserId = user.id;
+
+
+document.getElementsByTagName("button")[0].onclick = function(eo) {
+    eo.preventDefault();
+    let usersPostsBlock = document.createElement('div');
+    usersPostsBlock.id = 'userPosts';
+
+
+    let urlUsers = new URL('https://jsonplaceholder.typicode.com/posts');
+
+    fetch(urlUsers)
+        .then(value => value.json())
+        .then(posts => {
+            for (const post of posts) {
+
+                console.log(post.userId)
+
+                if (post.userId === currentUserId) {
+
+                    let divPostBlock = document.createElement('div');
+                    divPostBlock.classList.add('user-block');
+                    divPostBlock.innerText = `${post.title}`;
+
+                    usersPostsBlock.appendChild(divPostBlock);
+                }
+            }
+        });
+
+
+
+    document.body.appendChild(usersPostsBlock);
+
+};
