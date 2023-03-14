@@ -7,26 +7,105 @@ let user = JSON.parse(urlUser.searchParams.get('data'));
 let divDetailsBlock = document.getElementById('user-details');
 
 
-function getUserDetails (obj) {
-    for (const item in obj) {
 
-        if (typeof obj[item] === 'object') {
-            let addBlock = document.createElement('div');
-            addBlock.innerText = item;
-            getUserDetails(obj[item]);
+console.log(user);
 
+    for (const item in user) {
+        if (typeof user[item] !== 'object') {
+            let divUserDetails = document.createElement('div');
+            divUserDetails.classList.add('user-details-block');
+            divUserDetails.innerText = `${item}: ${user[item]}`;
+
+            divDetailsBlock.appendChild(divUserDetails);
         } else {
             let divUserDetails = document.createElement('div');
             divUserDetails.classList.add('user-details-block');
+            divUserDetails.innerText = `${item}:`;
 
-            divUserDetails.innerText = `${item}: ${obj[item]}`;
+            for (const element in user[item]) {
+                if (typeof user[item][element] !== 'object'){
+                    let addDetails =document.createElement('div');
+                    addDetails.classList.add('add-details');
+                    addDetails.innerText = `${element}: ${user[item][element]}`;
 
+                    divUserDetails.appendChild(addDetails);
+                } else {
+                    let divDetails = document.createElement('div');
+                    divDetails.classList.add('user-details-block');
+                    divDetails.innerText = `${element}:`;
+                    // addDetails.appendChild(divUserDetails);
+
+                }
+            }
             divDetailsBlock.appendChild(divUserDetails);
+
         }
     }
-}
-getUserDetails(user);
 
+
+
+
+
+
+
+// function getUserDetails (obj) {
+//     for (const item in obj) {
+//
+//         let divUserDetails = document.createElement('div');
+//         divUserDetails.classList.add('user-details-block');
+//
+//         divDetailsBlock.appendChild(divUserDetails);
+//         if (typeof obj[item] !== 'object') {
+//             divUserDetails.innerText = `${item}: ${obj[item]}`;
+//         } else {
+//
+//             let addBlock = document.createElement('div');
+//             addBlock.className = 'add-block';
+//
+//             addBlock.innerText = `${item}:`;
+//
+//             for (const element in obj[item]) {
+//                 divUserDetails.innerText = `${obj[item]}: ${element}: `;
+//
+//                 console.log(element);
+//             }
+//
+//             addBlock.appendChild(divUserDetails);
+//             divDetailsBlock.appendChild(addBlock);
+//
+//             // getUserDetails(obj[item]);
+//
+//
+//         }
+//     }
+// }
+// getUserDetails(user);
+
+
+//
+// function getUserDetails (obj) {
+//     for (const item in obj) {
+//
+//
+//         if (typeof obj[item] === 'object') {
+//             let addBlock = document.createElement('div');
+//             addBlock.innerText = item;
+//             console.log(obj);
+//             // console.log(obj[item]);
+//
+//             getUserDetails(obj[item]);
+//
+//         } else {
+//             let divUserDetails = document.createElement('div');
+//             divUserDetails.classList.add('user-details-block');
+//
+//             divUserDetails.innerText = `${item}: ${obj[item]}`;
+//
+//             divDetailsBlock.appendChild(divUserDetails);
+//         }
+//     }
+// }
+// getUserDetails(user);
 
 
 
@@ -35,9 +114,10 @@ getUserDetails(user);
 // (для получения постов используйте эндпоинт https://jsonplaceholder.typicode.com/users/USER_ID/posts)
 // 6 Каждому посту додати кнопку/посилання, при кліку на яку відбувається перехід на сторінку post-details.html, котра має детальну інфу про поточний пост.
 
+let buttUserDetails = document.getElementsByTagName("button")[0];
+buttUserDetails.id = 'butt-User-Details';
 
-
-document.getElementsByTagName("button")[0].onclick = function(eo) {
+buttUserDetails.onclick = function(eo) {
     eo.preventDefault();
     let usersPostsBlock = document.createElement('div');
     usersPostsBlock.id = 'userPosts';

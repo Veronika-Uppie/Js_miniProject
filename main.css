@@ -10,13 +10,14 @@ body{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
 }
 
 .users {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("img/bg.png");
+    background-image: url("img/bg_w3.jpg");
     background-size: 100%;
     margin: 10px;
 }
@@ -31,31 +32,52 @@ body{
 
 .headerUser{
     font-size: 36px;
-    color: #e6d193;
-    background: rgba(133, 117, 85, 0.42);
+    color: #ffffff;
+    background: rgba(173, 173, 173, 0.51);
     margin: 5px;
     width: 75%;
     height: 75px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #e6d194;
+    border-right: 4px solid rgba(236, 236, 236, 0.4);
+    border-bottom: 4px solid rgba(236, 236, 236, 0.4);
     border-radius: 10px;
 }
 
 .user-block{
     display: flex;
-    width: 48%;
+    width: 46%;
     height: 60px;
     justify-content: space-around;
     align-items: center;
     font-size: 24px;
     margin: 5px;
     border-radius: 10px;
-    background: rgba(222, 222, 222, 0.29);
-    border: 1px solid rgba(248, 248, 253, 0.53);
-
+    background: rgba(255, 255, 255, 0.58);
+    border-right: 4px solid rgba(201, 201, 201, 0.4);
+    border-bottom: 4px solid rgba(201, 201, 201, 0.4);
 }
 a{
-    color: rgb(244, 248, 250);
+    color: rgb(127, 127, 127);
+}
+
+/*user-details page*/
+#user-details{
+    background-image: url("img/bg_w5.jpg");
+    background-size: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+align-items: center
+}
+
+
+
+#butt-User-Details{
+    width: 90%;
+}
+
+.user-details-block{
+    width: 40%;
 }
