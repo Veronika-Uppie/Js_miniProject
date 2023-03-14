@@ -10,103 +10,62 @@ let divDetailsBlock = document.getElementById('user-details');
 
 console.log(user);
 
-    for (const item in user) {
-        if (typeof user[item] !== 'object') {
-            let divUserDetails = document.createElement('div');
-            divUserDetails.classList.add('user-details-block');
-            divUserDetails.innerText = `${item}: ${user[item]}`;
+for (const item in user) {
+    let divDtailInfo = document.createElement('div');
+    divDtailInfo.classList.add('div-dtail-info')
+    divDtailInfo.innerText = item;
+    divDetailsBlock.appendChild(divDtailInfo);
 
-            divDetailsBlock.appendChild(divUserDetails);
-        } else {
-            let divUserDetails = document.createElement('div');
-            divUserDetails.classList.add('user-details-block');
-            divUserDetails.innerText = `${item}:`;
+    function getUserDetails (obj) {
 
-            for (const element in user[item]) {
-                if (typeof user[item][element] !== 'object'){
-                    let addDetails =document.createElement('div');
-                    addDetails.classList.add('add-details');
-                    addDetails.innerText = `${element}: ${user[item][element]}`;
+        if (typeof user[item] !== 'object' ) {
+            divDtailInfo.innerText =`${item}: ${user[item]}`;
+        }
 
-                    divUserDetails.appendChild(addDetails);
+        if (typeof obj === 'object') {
+            for (const element in obj) {
+                if (typeof obj[element] !== 'object') {
+                    let addInfo = document.createElement('div');
+                    addInfo.innerText = `${element}: ${obj[element]}`;
+                    divDtailInfo.appendChild(addInfo);
+                    console.log(obj[element]);
                 } else {
-                    let divDetails = document.createElement('div');
-                    divDetails.classList.add('user-details-block');
-                    divDetails.innerText = `${element}:`;
-                    // addDetails.appendChild(divUserDetails);
-
+                    getUserDetails(obj[element]);
                 }
             }
-            divDetailsBlock.appendChild(divUserDetails);
-
         }
     }
+    getUserDetails(user[item]);
+}
 
 
 
-
-
-
-
-// function getUserDetails (obj) {
-//     for (const item in obj) {
+//     for (const item in user) {
+//         let divDtailInfo = document.createElement('div');
+//         divDtailInfo.classList.add('div-dtail-info')
+//         divDtailInfo.innerText = item;
+//         function getUserDetails (obj) {
 //
-//         let divUserDetails = document.createElement('div');
-//         divUserDetails.classList.add('user-details-block');
-//
-//         divDetailsBlock.appendChild(divUserDetails);
-//         if (typeof obj[item] !== 'object') {
-//             divUserDetails.innerText = `${item}: ${obj[item]}`;
-//         } else {
-//
-//             let addBlock = document.createElement('div');
-//             addBlock.className = 'add-block';
-//
-//             addBlock.innerText = `${item}:`;
-//
-//             for (const element in obj[item]) {
-//                 divUserDetails.innerText = `${obj[item]}: ${element}: `;
-//
-//                 console.log(element);
-//             }
-//
-//             addBlock.appendChild(divUserDetails);
-//             divDetailsBlock.appendChild(addBlock);
-//
-//             // getUserDetails(obj[item]);
-//
-//
+//         divDetailsBlock.appendChild(divDtailInfo);
+//         if (typeof user[item] !== 'object' ) {
+//             divDtailInfo.innerText =`${item}: ${user[item]}`;
 //         }
-//     }
-// }
-// getUserDetails(user);
-
-
 //
-// function getUserDetails (obj) {
-//     for (const item in obj) {
-//
-//
-//         if (typeof obj[item] === 'object') {
-//             let addBlock = document.createElement('div');
-//             addBlock.innerText = item;
-//             console.log(obj);
-//             // console.log(obj[item]);
-//
-//             getUserDetails(obj[item]);
-//
-//         } else {
-//             let divUserDetails = document.createElement('div');
-//             divUserDetails.classList.add('user-details-block');
-//
-//             divUserDetails.innerText = `${item}: ${obj[item]}`;
-//
-//             divDetailsBlock.appendChild(divUserDetails);
+//             if (typeof obj === 'object') {
+//                     for (const element in obj) {
+//                         if (typeof obj[element] !== 'object') {
+//                             let addInfo = document.createElement('div');
+//                             addInfo.innerText = `${element}: ${obj[element]}`;
+//                             divDtailInfo.appendChild(addInfo);
+//                             console.log(obj[element]);
+//                         } else {
+//                             getUserDetails(obj[element]);
+//                         }
+//                     }
+//                 }
 //         }
-//     }
+//         getUserDetails(user[item]);
 // }
-// getUserDetails(user);
-
 
 
 

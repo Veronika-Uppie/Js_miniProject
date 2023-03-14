@@ -81,3 +81,9 @@ align-items: center
 .user-details-block{
     width: 40%;
 }
+
+
+.div-dtail-info{
+    width: 50%;
+    /*display: flex;*/
+}
