@@ -7,82 +7,49 @@ let user = JSON.parse(urlUser.searchParams.get('data'));
 let divDetailsBlock = document.getElementById('user-details');
 
 
+
+for (const item in user) {
+    let divDtailInfo = document.createElement('div');
+    divDtailInfo.classList.add('div-dtail-info')
+    divDtailInfo.innerText = `${item}: `;
+    divDetailsBlock.appendChild(divDtailInfo);
+
+    function getUserDetails (obj) {
+
+        if (typeof user[item] !== 'object' ) {
+            divDtailInfo.innerText =`${item}: ${user[item]}`;
+        }
+        if (typeof obj === 'object') {
+            for (const element in obj) {
+                if (typeof obj[element] !== 'object') {
+                    let addInfo = document.createElement('div');
+                    addInfo.innerText = `${element}: ${obj[element]}`;
+                    divDtailInfo.appendChild(addInfo);
+                } else {
+                    getUserDetails(obj[element]);
+                }
+            }
+        }
+    }
+    getUserDetails(user[item]);
+}
+
+
 // function getUserDetails (obj) {
 //     for (const item in obj) {
 //         let divDtailInfo = document.createElement('div');
-//         divDtailInfo.classList.add('div-dtail-info');
-//
-//
+//         divDtailInfo.classList.add('div-dtail-info')
 //         divDetailsBlock.appendChild(divDtailInfo);
-//
-//
-//                 if (typeof obj[item] !== 'object') {
-//                     let pDtailInfo = document.createElement('p');
-//
-//                     pDtailInfo.innerText = item;
-//                     divDtailInfo.append(pDtailInfo);
-//
-//
-//                     let pInfo = document.createElement('p');
-//                     pInfo.innerText = obj[item]
-//                     divDtailInfo.append(pInfo)
-//
-//                 } else {
-//
-//
-//                     let pDtailInfo = document.createElement('p');
-//                     pDtailInfo.innerText = item;
-//
-//                     divDtailInfo.append(pDtailInfo);
-//                     divDetailsBlock.appendChild(divDtailInfo);
-//
-//                         getUserDetails(obj[item])
-//                         console.log(element)
-//                         console.log(obj[item][element])
-//
-//
-//
+//         if (typeof obj[item] !== 'object' ){
+//             divDtailInfo.innerText = `${item}: ${obj[item]}`
+//         } else {
+//             divDtailInfo.innerText = item;
+//             getUserDetails(obj[item])
+//         }
 //             }
-//     }
 // }
 //
 // getUserDetails(user);
-
-
-
-
-
-
-
-
-
-
-function getUserDetails (obj) {
-    for (const item in obj) {
-
-        let divDtailInfo = document.createElement('div');
-        divDtailInfo.classList.add('div-dtail-info')
-        divDetailsBlock.appendChild(divDtailInfo);
-
-
-        if (typeof obj[item] !== 'object' ){
-
-            divDtailInfo.innerText = `${item}: ${obj[item]}`
-
-
-        } else {
-            let addInfo = document.createElement('div');
-            divDtailInfo.innerText = item;
-
-
-            divDtailInfo.append(addInfo);
-            getUserDetails(obj[item])
-
-        }
-            }
-}
-
-getUserDetails(user);
 
 
 
