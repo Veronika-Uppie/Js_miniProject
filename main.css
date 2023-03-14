@@ -84,6 +84,7 @@ align-items: center
 
 
 .div-dtail-info{
-    width: 50%;
-    /*display: flex;*/
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
 }

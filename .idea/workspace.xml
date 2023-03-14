@@ -63,7 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1678715249768</updated>
       <workItem from="1678715250190" duration="24360000" />
-      <workItem from="1678784175924" duration="16262000" />
+      <workItem from="1678784175924" duration="21793000" />
     </task>
     <task id="LOCAL-00001" summary=" В index.html&#10;1 отримала масив об'єктів з endpoint`а https://jsonplaceholder.typicode.com/users&#10;2 Вивела id,name всіх user в index.html. Окремий блок для кожного user.&#10;3 Додала кожному блоку посилання , при кліку на яку відбувається перехід  на сторінку user-details.html, котра має детальну інфорацію про об'єкт на який клікнули&#10;&#10; На строрінці user-details.html:&#10;4 Вивела НЕ! всю інформацію про об'єкт user на який клікнули">
       <created>1678719696176</created>
@@ -114,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678790606930</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Рекурсія">
+      <created>1678818638237</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1678818638237</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +135,7 @@
     <MESSAGE value=" 7 Вивела всю, без виключення, інформацію про об'єкт post на який клікнули ." />
     <MESSAGE value="8 Нижчє інформаці про пост, вивела всі коментарі поточного поста" />
     <MESSAGE value="Стилі" />
-    <option name="LAST_COMMIT_MESSAGE" value="Стилі" />
+    <MESSAGE value="Рекурсія" />
+    <option name="LAST_COMMIT_MESSAGE" value="Рекурсія" />
   </component>
 </project>
