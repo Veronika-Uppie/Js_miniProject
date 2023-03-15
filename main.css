@@ -58,6 +58,7 @@ body{
     border-right: 4px solid rgba(201, 201, 201, 0.4);
     border-bottom: 4px solid rgba(201, 201, 201, 0.4);
 }
+
 a{
     color: rgb(127, 127, 127);
 }
@@ -69,7 +70,7 @@ a{
     width: 90%;
     display: flex;
     flex-direction: column;
-align-items: center
+    align-items: center
 }
 
 
@@ -87,10 +88,78 @@ align-items: center
     width: 40%;
     display: flex;
     margin: 5px;
+    padding: 7px;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.58);
     border-right: 4px solid rgba(201, 201, 201, 0.4);
     border-bottom: 4px solid rgba(201, 201, 201, 0.4);
     flex-wrap: wrap;
     flex-direction: column;
+}
+
+#userPosts{
+    background-image: url("img/bg_w5.jpg");
+    background-size: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+.post-block{
+    display: flex;
+    width: 9%;
+    height: 60px;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.58);
+    border-right: 4px solid rgba(201, 201, 201, 0.4);
+    border-bottom: 4px solid rgba(201, 201, 201, 0.4);
+}
+
+
+
+/*post-details page*/
+
+#user-posts {
+    background-image: url("img/bg_w1.webp");
+    background-size: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+
+}
+
+.user-posts-info{
+    display: flex;
+    padding: 5px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.58);
+    border-right: 4px solid rgba(201, 201, 201, 0.4);
+    border-bottom: 4px solid rgba(201, 201, 201, 0.4);
+}
+
+#post-comments{
+    background-image: url("img/bg_w1.webp");
+    background-size: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.comment-block{
+    display: flex;
+    padding: 5px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.58);
+    border-right: 4px solid rgba(201, 201, 201, 0.4);
+    border-bottom: 4px solid rgba(201, 201, 201, 0.4);
 }

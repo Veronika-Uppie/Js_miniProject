@@ -75,7 +75,7 @@ buttUserDetails.onclick = function(eo) {
             for (const post of posts) {
 
                     let divPostBlock = document.createElement('div');
-                    divPostBlock.classList.add('user-block');
+                    divPostBlock.classList.add('post-block');
                     let a = document.createElement('a');
                     a.innerText = post.title;
                     a.href = 'post-details.html?data=' + JSON.stringify(post);
