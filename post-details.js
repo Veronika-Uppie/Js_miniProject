@@ -40,12 +40,15 @@ fetch(urlComments)
     .then(value => value.json())
     .then(comments => {
         for (const comment of comments) {
-            console.log(comment)
-
                 let divCommentBlock = document.createElement('div');
                 divCommentBlock.classList.add('comment-block');
-                divCommentBlock.innerText = comment.body;
 
+            for (const item in comment) {
+                let divComment = document.createElement('div');
+                divComment.classList.add('comment-info');
+                divComment.innerText = `${item}: ${comment[item]}`;
+                divCommentBlock.appendChild(divComment);
+            }
                 postComments.appendChild(divCommentBlock);
         }
     });
