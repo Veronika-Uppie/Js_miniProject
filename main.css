@@ -26,7 +26,7 @@ body{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 75%;
+    width: 90%;
     margin-bottom: 10px;
 }
 
@@ -35,7 +35,7 @@ body{
     color: #ffffff;
     background: rgba(173, 173, 173, 0.51);
     margin: 5px;
-    width: 75%;
+    width: 90%;
     height: 75px;
     display: flex;
     justify-content: center;
@@ -53,21 +53,35 @@ body{
     border-bottom: 4px solid rgba(201, 201, 201, 0.4);
 }
 .user-block{
-    width: 46%;
-    height: 60px;
+    width: 48%;
     justify-content: space-around;
     align-items: center;
     font-size: 24px;
     margin: 5px;
     border-radius: 10px;
+    flex-direction: column;
 }
 
 a{
-    color: rgb(127, 127, 127);
+    color: rgb(102, 101, 101);
+    text-decoration: none;
 }
 
-/*user-details page*/
+.user-block h1{
+    font-size: 30px;
+    color: #3d3d3d;
+}
 
+.user-block a{
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.58);
+    border: 1px solid rgb(111, 105, 105);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+/*user-details page*/
 
 #user-details, #userPosts{
     width: 90%;
@@ -106,16 +120,17 @@ a{
 }
 
 .post-block{
-    width: 18%;
+    width: 17%;
     margin: 5px;
+    padding: 5px;
     border-radius: 10px;
     flex-wrap: wrap;
     flex-direction: column;
+    justify-content: center;
 }
 
 
 /*post-details page*/
-
 
 #user-posts, #post-comments{
     width: 90%;
@@ -136,7 +151,7 @@ a{
 }
 
 
-#post-comments h2{
+#post-comments h2, #userPosts h2{
     width: 100%;
     display: flex;
     justify-content: center;
