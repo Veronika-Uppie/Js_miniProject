@@ -10,7 +10,7 @@ let divDetailsBlock = document.getElementById('user-details');
 
 for (const item in user) {
     let divDtailInfo = document.createElement('div');
-    divDtailInfo.classList.add('div-dtail-info')
+    divDtailInfo.classList.add('div-detail-info')
     divDtailInfo.innerText = `${item}: `;
     divDetailsBlock.appendChild(divDtailInfo);
 
