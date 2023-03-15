@@ -58,7 +58,6 @@ buttUserDetails.onclick = function(eo) {
 
     let urlPosts = new URL('https://jsonplaceholder.typicode.com/posts?userId=' + JSON.stringify(user.id));
 
-
     fetch(urlPosts)
         .then(value => value.json())
         .then(posts => {
@@ -78,5 +77,8 @@ buttUserDetails.onclick = function(eo) {
     document.body.appendChild(usersPostsBlock);
 };
 
+buttUserDetails.addEventListener("click", function () {
+    buttUserDetails.setAttribute('disabled', 'disabled ');
+})
 
 
